@@ -1,0 +1,18 @@
+<div class="contact-details-container">
+  <div class="contact-details-card">
+    <div class="contact-details-header">
+      <h2>Contact Details</h2>
+    </div>
+    <div class="contact-details-content">
+      <p><strong>Name:</strong> {{ contact.name }} {{ contact.surname }}</p>
+      <p><strong>Email:</strong> {{ contact.email }}</p>
+      <p><strong>Category:</strong> {{ contact.category }}</p>
+      <p><strong>Subcategory:</strong> {{ contact.subcategory }}</p>
+      <p><strong>Phone Number:</strong> {{ contact.phoneNumber }}</p>
+      <p><strong>Birthday:</strong> {{ getBirthDay() }}</p>
+    </div>
+    <div class="contact-details-footer">
+      <button mat-button color="primary" (click)="goBack()">Back</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<ul>
+  <li><a class="active" routerLink="login">Login</a></li>
+</ul>
+
+<div class="contact-container">
+  <div
+    *ngFor="let contact of contacts"
+    class="contact-card"
+    [ngClass]="{ odd: contact.id % 2 !== 0, even: contact.id % 2 === 0 }"
+  >
+    <mat-card>
+      <mat-card-header>
+        <div mat-card-avatar class="contact-avatar"></div>
+        <mat-card-title
+          >{{ contact.name }} {{ contact.surname }}</mat-card-title
+        >
+        <mat-card-subtitle>Email: {{ contact.email }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-flat-button (click)="goToDetails(contact)">
+          Look More
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

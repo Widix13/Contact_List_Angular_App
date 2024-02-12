@@ -1,0 +1,47 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name" />
+  </div>
+  <div>
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" formControlName="surname" />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email" />
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" />
+  </div>
+  <div>
+    <label for="category">Category:</label>
+    <select
+      id="category"
+      formControlName="category"
+      (change)="onCategoryChange()"
+    >
+      <option value="0">Business</option>
+      <option value="1">Private</option>
+      <option value="2">Other</option>
+    </select>
+  </div>
+  <!-- <div>
+    <label for="category">Category:</label>
+    <input type="number" id="category" formControlName="category" />
+  </div> -->
+  <div>
+    <label for="subcategory">Subcategory:</label>
+    <input type="text" id="subcategory" formControlName="subcategory" />
+  </div>
+  <div>
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" formControlName="phoneNumber" />
+  </div>
+  <div>
+    <label for="birthDate">Birth Date:</label>
+    <input type="date" id="birthDate" formControlName="birthDate" />
+  </div>
+  <button type="submit" [disabled]="contactForm.invalid">Save</button>
+</form>
